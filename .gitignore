@@ -1,2 +1,4 @@
 .vscode
 dist/
+src/ivycheck.egg-info
+*.pyc
