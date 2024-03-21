@@ -8,7 +8,7 @@ except FileNotFoundError:
 
 setuptools.setup(
     name="ivycheck",
-    version="0.9.0",
+    version="0.9.4",
     author="IvyCheck",
     description="IvyCheck Python Client SDK",
     author_email="founders@ivycheck.com",
