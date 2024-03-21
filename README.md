@@ -20,10 +20,10 @@ ivy = ivycheck.IvyCheck(
 
 ivy.checks.hallucination(text="It is sunny outside", context="It is rainig cats and dogs")
 # {'passed': False,
-   'score': 0.0003337860107421875,
-   'message': 'Hallucination detected',
-   'findings': None,
-   'sanitized_output': None}
+#  'score': 0.0003337860107421875,
+#  'message': 'Hallucination detected',
+#  'findings': None,
+#  'sanitized_output': None}
 
 
 
