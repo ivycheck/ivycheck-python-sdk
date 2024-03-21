@@ -19,6 +19,7 @@ ivy = ivycheck.IvyCheck(
 )
 
 ivy.checks.hallucination(text="It is sunny outside", context="It is rainig cats and dogs")
+
 # {'passed': False,
 #  'score': 0.0003337860107421875,
 #  'message': 'Hallucination detected',
@@ -31,12 +32,12 @@ ivy.checks.hallucination(text="It is sunny outside", context="It is rainig cats 
 
 ## Available Resources and Operations
 
-### [checks](docs/sdks/checks/README.md)
+### Checks
 
 - [hallucination](https://docs.ivycheck.com/checks/hallucination) - Hallucination
 - [pii](https://docs.ivycheck.com/checks/pii) - Pii
 - [prompt_injection](https://docs.ivycheck.com/checks/prompt_injection) - Prompt Injection
-<!-- End Available Resources and Operations [operations] -->
+
 
 ## Custom HTTP Client
 
