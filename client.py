@@ -119,9 +119,7 @@ class Checks:
 
 if __name__ == "__main__":
     # Initialize the client
-    ivy = IvyCheck(
-        base_url="http://localhost:8000", api_key="ivy-D0RAgRBRlbUr6Y7RAvhSRg"
-    )
+    ivy = IvyCheck(base_url="http://localhost:8000", api_key="<your-api-key>")
 
     # Perform a hallucination check
     result = ivy.checks.hallucination(
