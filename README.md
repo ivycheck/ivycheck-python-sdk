@@ -85,11 +85,3 @@ if res.check_result is not None:
     pass
 
 ```
-
-# Development
-
-## Maturity
-
-This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
-to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
-looking for the latest version.
