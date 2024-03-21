@@ -1,14 +1,11 @@
-# IvyCheck-SDK
+# IvyCheck Python  SDK
 
-<!-- Start SDK Installation [installation] -->
 
 ## SDK Installation
 
 ```bash
 pip install ivycheck
 ```
-
-<!-- End SDK Installation [installation] -->
 
 ## SDK Example Usage
 
