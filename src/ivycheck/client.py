@@ -45,7 +45,7 @@ class IvyCheck:
 
         # instantiate subclient
         self.checks = Checks(self)
-        self.classification = Classification(self)
+        self.classify = Classification(self)
 
 
 class Checks:
@@ -131,6 +131,15 @@ class Classification:
 
     def __init__(self, client: IvyCheck) -> None:
         self.client = client
+
+    def __call__(self, text: str, categories: List[str], threshold: float = 0.1):
+        """
+        Perform a classification check on the given text.
+
+        :param text: The text to be classified.
+        """
+
+        return self.zero_shot(text, categories, threshold)
 
     def zero_shot(self, text: str, categories: List[str], threshold: float = 0.1):
         """

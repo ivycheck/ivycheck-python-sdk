@@ -3,3 +3,4 @@ dist/
 build/
 src/ivycheck.egg-info
 *.pyc
+.venv/
