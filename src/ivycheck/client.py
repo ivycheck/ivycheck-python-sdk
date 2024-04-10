@@ -45,6 +45,7 @@ class IvyCheck:
 
         # instantiate subclient
         self.checks = Checks(self)
+        self.classification = Classification(self)
 
 
 class Checks:
@@ -119,6 +120,26 @@ class Checks:
         """
         url = f"{self.client.base_url}/checks/prompt_injection"
         payload = {"text": text}
+        response = requests.post(url, json=payload, headers=self.client.headers)
+        if response.status_code == 200:
+            return response.json()
+        else:
+            return response.text
+
+
+class Classification:
+
+    def __init__(self, client: IvyCheck) -> None:
+        self.client = client
+
+    def zero_shot(self, text: str, categories: List[str], threshold: float = 0.1):
+        """
+        Perform a classification check on the given text.
+
+        :param text: The text to be classified.
+        """
+        url = f"{self.client.base_url}/classification/zeroshot"
+        payload = {"text": text, "categories": categories, "threshold": threshold}
         response = requests.post(url, json=payload, headers=self.client.headers)
         if response.status_code == 200:
             return response.json()
